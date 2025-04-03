@@ -6,9 +6,7 @@ public:
             fr[ele]++;
         }
         vector<pair<int, int>> vec(fr.begin(),fr.end()); 
-        sort(vec.begin(), vec.end(), [](const pair<int, int>& a, const   pair<int, int>& b) {
-        return a.second > b.second;
-    });
+        sort(vec.begin(), vec.end(),compare);
   vector<int> result;
     for (int i = 0; i < k; i++) {
         result.push_back(vec[i].first);  
